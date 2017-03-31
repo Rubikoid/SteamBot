@@ -196,7 +196,7 @@ namespace SteamTrade
             RSAParameters rsaParameters = new RSAParameters
             {
                 Exponent = HexToByte(rsaJson.publickey_exp),
-                Modulus = HexToByte(rsaJson.publickey_mod)
+                Modulus = HexToByte(rsaJson.publickey_mod.ToUpper()) 
             };
 
             rsa.ImportParameters(rsaParameters);
